@@ -83,7 +83,7 @@ FP make_closure(FP target, void *userdata, size_t n, const enum arg_type argtype
     assert(info != NULL);
     {
         size_t space = 0;
-        size_t ngrn = 1; // The Next General-purpose Register Number
+        size_t ngrn = 0; // The Next General-purpose Register Number
         size_t nsrn = 0; // The Next SIMD and Floating-point Register Number
         for (size_t i = 0; i < n; ++i) {
 #if defined(__APPLE__)
