@@ -16,5 +16,7 @@ int main(void) {
     int (^g2)(int) = f(-7);
     h(g1);
     h(g2);
+    Block_release(g1);
+    Block_release(g2);
     printf("%zu\n", sizeof(int (^)(int)));
 }
